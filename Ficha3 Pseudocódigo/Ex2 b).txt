@@ -1,0 +1,26 @@
+ED:
+	num, produto, aux, N INTEIROS
+	
+INICIO
+	REPETE
+		LER(N)
+	ENQUANTO (N < 0)
+
+	ENQUANTO (N > 0)
+		REPETE
+			LER(num)
+		ENQUANTO (num < 0)
+		produto = 1
+
+		ENQUANTO (num <> 0)
+			aux = num MOD 10
+			num = num DIV 10
+			SE (aux MOD 2 <> 0)
+				produto = produto * aux
+			FIMSE
+		FIMENQUANTO
+		ESCREVE("O produto é: ", produto)
+		N = N - 1
+	FIMENQUANTO
+	ESCREVER("Fim do ciclo."
+FIM

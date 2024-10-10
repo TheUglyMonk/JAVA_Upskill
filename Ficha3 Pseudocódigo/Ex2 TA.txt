@@ -1,0 +1,18 @@
+ED:
+	deposito, taxaJuro REAL
+	i INTEIRO
+
+INICIO
+
+	REPETE
+		LER(deposito)
+		LER(taxaJuro)
+	ENQUANTO (deposito <= 0 E taxaJuro <= 0)
+	i = 0
+
+	ENQUANTO (i < 12)
+		deposito = deposito + deposito*(taxaJuro/100)
+		i = i + 1
+	FIMENQUANTO
+	ESCREVER("Valor disponível: " deposito)
+Fim

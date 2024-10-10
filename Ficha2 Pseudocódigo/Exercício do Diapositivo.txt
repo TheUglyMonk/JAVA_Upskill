@@ -1,0 +1,13 @@
+ED:
+	aux, nImpar, nPar INTEIRO
+INICIO
+REPETE
+	LER(aux)
+	SE(aux MOD 2 = 0) ENTAO
+		nPar = nPar + 1
+	SENAO
+		nImpar = nImpar + 1
+	FIMSE
+ENQUANTO(nPar<>Impar)
+ESCREVE("Números introduzidos " nImpar + nPar)
+FIM

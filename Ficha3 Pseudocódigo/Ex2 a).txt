@@ -1,0 +1,18 @@
+ED:
+	num, produto, aux INTEIROS
+	
+INICIO
+	REPETE
+		LER(num)
+	ENQUANTO (num < 0)
+	produto = 1
+
+	ENQUANTO (num <> 0)
+		aux = num MOD 10
+		num = num DIV 10
+		SE (aux MOD 2 <> 0)
+			produto = produto * aux
+		FIMSE
+	FIMENQUANTO
+	ESCREVE("O produto é: ", produto)
+FIM

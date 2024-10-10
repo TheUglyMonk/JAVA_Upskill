@@ -1,0 +1,15 @@
+ED:
+	min, max INTEIRO
+INICIO
+	REPETE
+		LER(min)
+		LER(max)
+	ENQUANTO (min >= max)
+
+	ENQUANTO (min < max)
+		SE (min MOD 3 = 0 E min MOD 2 = 0) ENTAO
+			ESCREVER(min)
+		FIMSE
+		min = min + 1
+	FIMENQUANTO
+FIM

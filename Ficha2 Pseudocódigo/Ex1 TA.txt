@@ -1,0 +1,29 @@
+ED:
+	contPar, contImpar, cont, somaImpar Inteiro
+	num REAL
+INICIO
+	contPar = 0 
+	contImpar = 0
+	somaIMPAR = 0
+	cont = 0 
+	LER(num)
+	ENQUANTO num>0 
+		SE numMOD2=0 ENTAO
+			contPar = contPar + 1
+		SENAO
+			contImpar = contImpar + 1
+		FIMSE
+		cont = cont + 1
+		LER(num)
+	FIMENQUANTO
+	SE (cont > 0) ENTAO
+		ESCREVER("Percentagem de pares: ", contPar*100/cont)
+		SE (contImpar > 0)
+			ESCREVER("Média dos Impares: ", somaImpar/contImpar)
+		SENAO
+			ESCREVER("Não foram introduzidos valores impares.")
+		FIMSE
+	SENAO
+		ESCREVER("Primeiro valor introduzido foi inválido!")
+	FIMSE
+FIM

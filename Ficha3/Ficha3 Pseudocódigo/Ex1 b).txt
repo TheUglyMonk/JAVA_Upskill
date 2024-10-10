@@ -1,0 +1,20 @@
+ED:
+	num, soma, aux INTEIROS
+	
+INICIO
+	LER(num)
+	soma = 0
+
+	ENQUANTO (num > 0)
+		ENQUANTO (num <> 0)
+			aux = num MOD 10
+			num = num DIV 10
+			SE (aux MOD 2 = 0)
+				soma = soma + aux
+			FIMSE
+		FIMENQUANTO
+		ESCREVE("A soma é: ", soma)
+		LER(num)
+	FIMENQUANTO
+	ESCREVER("Número negativo introduzido, fim do ciclo.")
+FIM

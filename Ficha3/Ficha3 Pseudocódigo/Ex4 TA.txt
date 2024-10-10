@@ -1,0 +1,82 @@
+//////////////////////////////////////////////////////////////////
+
+Esta resolução lê o número da direita para a esquerda.
+
+//////////////////////////////////////////////////////////////////
+
+ED:
+	num, cont, max, aux INTEIROS
+
+INICIO 	
+	REPETE
+		LER(num)
+	ENQUANTO (num <= 0)
+	
+	cont = 1
+	max = 0 
+
+	ENQUANTO (num <> 0)
+		aux = num MOD 10 
+		num = num DIV 10
+		Se (aux < num MOD 10)
+			cont = cont + 1
+		SENAO
+			cont = 1
+		FIMSE
+		SE (cont > max)
+			max = cont 
+		FIMSE
+	FIMENQUANTO
+	
+	SE (max > 1)
+		ESCREVER("Segmento crescente de ",max, " números)
+	SENAO
+		ESCREVER("Não tem segmento crescente")
+	FIMSE
+FIM
+
+//////////////////////////////////////////////////////////////////
+
+Esta resolução lê o número da esquerda para a direita.
+
+//////////////////////////////////////////////////////////////////
+
+
+ED:
+	num, cont, max, aux, num1, dig INTEIROS
+
+INICIO 	
+	REPETE
+		LER(num)
+	ENQUANTO (num <= 0)
+
+	num1 = 0 
+	ENQUANTO(num <> 0) 
+		dig = num MOD 10 
+		num1 = num1 * 10 + dig 
+		num = num DIV 10 
+	FIMENQUANTO
+	
+	num = num1
+	cont = 1
+	max = 0 
+
+	ENQUANTO (num <> 0)
+		aux = num MOD 10 
+		num = num DIV 10
+		Se (aux < num MOD 10) ENTAO
+			cont = cont + 1
+		SENAO
+			cont = 1
+		FIMSE
+		SE (cont > max) ENTAO
+			max = cont 
+		FIMSE
+	FIMENQUANTO
+	
+	SE (max > 1) ENTAO
+		ESCREVER("Segmento crescente de ",max, " números)
+	SENAO
+		ESCREVER("Não tem segmento crescente")
+	FIMSE
+FIM

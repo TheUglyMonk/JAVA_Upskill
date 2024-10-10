@@ -1,0 +1,27 @@
+ED:
+	num, min, max, soma INTEIRO
+INICIO
+	REPETE
+		LER(max) 
+	ENQUANTO(max <=  0)
+
+	REPETE
+		LER(num)
+	ENQUANTO(num <= 0)
+	
+	min = num
+	soma = num
+
+	REPETE		
+		REPETE
+			LER(num)
+		ENQUANTO( num < 0)
+
+		SE min < num ENTAO
+			min = num
+		FIMSE
+		soma = soma + num
+	ENQUANTO soma <= max
+
+	ESCREVER("O valor mínimo é: ", min)
+FIM

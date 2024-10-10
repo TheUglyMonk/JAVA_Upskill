@@ -1,0 +1,39 @@
+ED: 
+	num, aux, aux1 INTEIRO
+
+INICIO
+	REPETE
+		LER(num)
+	ENQUANTO (num < 2 OU num > 20)
+
+	aux = 1
+	
+	ENQUANTO (aux <= num)
+		
+		aux1 = 1
+		
+		ENQUANTO (aux1 <= aux)
+			ESCREVER(aux1, " ")
+			aux1 = aux1 + 1
+		
+		FIMENQUANTO
+		
+		aux = aux + 1
+	
+	FIMENQUANTO
+
+	aux = aux - 1
+
+	ENQUANTO (aux >= 1)
+		
+		aux1 = aux
+		
+		ENQUANTO (aux1 >= 1)
+			ESCREVER(aux1, " ")
+			aux1 = aux1 - 1
+		FIMENQUANTO
+
+		aux = aux - 1
+	FIMENQUANTO
+
+		

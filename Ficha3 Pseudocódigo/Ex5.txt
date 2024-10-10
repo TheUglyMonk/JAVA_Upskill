@@ -1,0 +1,24 @@
+ED:
+	num, div INTEIROS
+	aux BOOLENANO
+INICIO
+	REPETE
+		LER(num)
+	ENQUANTO (num < 0)
+	
+	div = 1
+	aux = TRUE
+	
+	ENQUANTO (div < num E num <> 1)
+		SE (num MOD div = 0 E div <> 1) ENTAO
+			aux = FALSE
+		FIMSE
+		div = div + 1
+	FIMENQUANTO
+
+	SE (aux = FALSE OU num = 1) ENTAO
+		ESCREVER("Não é primo!")
+	SENAO
+		ESCREVER("É primo!")
+	FIMSE
+FIM

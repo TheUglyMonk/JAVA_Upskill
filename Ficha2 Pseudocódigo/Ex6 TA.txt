@@ -1,0 +1,36 @@
+ED: 
+	a, b, c, aux REAL
+	N, cont INTEIRO
+INICIO
+	REPETE
+		LER(N)
+	ENQUANTO (N <= 0)
+
+	cont = 0
+	
+	ENQUANTO (cont < N)
+
+		LER(a)
+		LER(b)
+		LER(c)
+	
+		SE (a = 0)
+			SE (b = 0) 
+				ESCREVER("EQUAÇÃO IMPOSSÍVEL!")
+			SENAO
+				ESCREVER("Não é equação do segundo grau. O valor de x é ", -c/b)
+		SENAO
+			aux = (b^2)-4*a*c 
+			SE (aux = 0)
+				ESCREVER("A equação tem uma raiz dupla. O valor da raiz é ", (-b)/(2*a))
+			FIMSE
+			SE (aux > 0)
+				ESCREVER("A equação tem duas raízes reais. Os valores das raízes são ", (-b+(aux^0,5))/(2*a), "e ", (-b-(aux^0,5))/(2*a))
+			FIMSE
+			SE (aux < 0) 
+				ESCREVER("A equação tem raízes imaginárias. Os valores das raízes são (", -b, "+i", aux*-1, ")/", 2*a, "e (", -b, "-i", aux*-1, ")/", 2*a)
+			FIMSE
+		FIMSE
+		cont = cont + 1
+	FIMENQUANTO
+FIM

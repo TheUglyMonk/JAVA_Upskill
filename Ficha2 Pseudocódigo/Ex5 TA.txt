@@ -1,0 +1,26 @@
+ED:
+	num, max, produto, nummax REAL
+INICIO
+	REPETE
+		LER(MAX)
+	ENQUANTO (max < 0)
+	
+	REPETE
+		LER(num)
+	ENQUANTO (num < 0)
+
+	produto = num
+	nummax = num
+
+	ENQUANTO (produto <= max)
+		REPETE
+			LER(num)
+		ENQUANTO (num < 0)
+		produto = produto * num
+		SE (nummax < num) ENTAO
+			nummax = num
+		FIMSE
+	FIMENQUANTO
+	ESCREVE("O número máximo é: ", nummax)
+FIM
+		

@@ -1,0 +1,36 @@
+ED
+	num, cont, aux INTEIRO
+	test BOOLEANA
+
+INICIO
+	REPETE
+		LER(num)
+		aux = num
+		cont = 0
+		test = TRUE
+		ENQUANTO (aux <> 0)
+			cont = cont + 1
+			aux = aux DIV 10
+		FIMENQUANTO
+		SE (cont <> 4) ENTAO
+			test = FALSE
+		FIMSE
+	ENQUANTO(test = FALSE OU num MOD 2 <> 0)
+
+	aux = 0
+	SE ( num > 0)
+		ENQUANTO (aux <= num)
+			SE (aux MOD 7 = 0) ENTAO
+				ESCREVER(aux)
+			FIMSE
+			aux = aux + 1
+		FIMENQUANTO
+	SENAO
+		ENQUANTO (aux <= num)
+			SE (aux MOD 7 = 0) ENTAO
+				ESCREVER(aux)
+			FIMSE
+			aux = aux - 1
+		FIMENQUANTO
+	FIMSE
+FIM

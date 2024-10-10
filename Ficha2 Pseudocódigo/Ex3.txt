@@ -1,0 +1,42 @@
+ED:
+	num, min, somaPar, contPar, contImpar, cont INTEIRO
+INICIO
+	LER(num)
+	min = num
+	cont = 0
+	somaPAR = 0
+	contPar = 0 
+	contImpar = 0
+
+	ENQUANTO (cont<100 E num>=0)
+		cont = cont + 1
+
+		SE (min<num) ENTAO
+			min = num
+		FIMSE
+		SE (numMOD2=0) ENTAO
+			somaPar = somaPar + num
+			contPar = contPar + 1
+		SENAO
+			contImpar =  contImpar + 1
+		FIMSE
+		SE (cont<100) ENTAO
+			LER(num)
+		FIMSE
+	FIMENQUANTO
+	
+	SE (cont > 0) ENTAO 
+		ESCREVER("O valor mínimo é: ", min)
+	
+		SE (contPar > 0) ENTAO 
+			ESCREVER("A médias dos números pares é: ", somaPar/contPar)
+		SENAO
+			ESCREVER("Média impossível!")
+		FIMSE
+
+		ESCREVER("A perCentagem de Impares é: ", contImpar*100/cont)
+	SENAO
+		ESCREVER("Não foram introduzidos números válidos!")
+FIM
+					
+			

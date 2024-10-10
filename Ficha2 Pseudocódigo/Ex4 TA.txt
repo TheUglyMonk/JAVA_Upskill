@@ -1,0 +1,24 @@
+ED:
+	contFunc INTEIRO
+	salario, horasExtra, soma, salarioTotal REAL
+INICIO
+	soma = 0 
+	contFunc = 0
+	LER(horasExtra)
+	ENQUANTO (horasExtra <> -1)
+		REPETE
+			LER(salario)
+		ENQUANTO (salario < 0)
+		contFunc = contFunc + 1
+		ESCREVER("Salário mensal do ", contFunc, "º funcionário é ", horasExtra*(salario*0,02)+salario)
+		soma = soma +  horasExtra*(salario*0,02)+salario
+		REPETE
+			LER(horasExtra)
+		ENQUANTO (horasExtra < 0 E horasExtra <> -1)
+	FIMENQUANTO
+	SE (contFunc > 0)
+		ESCREVER("Média é ", soma/contFunc)
+	SENAO
+		ESCREVER("Não foram lidos valores!")
+	FIMSE
+FIM

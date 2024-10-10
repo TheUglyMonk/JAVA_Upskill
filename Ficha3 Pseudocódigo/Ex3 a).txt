@@ -1,0 +1,16 @@
+ED: 
+	num, num1, dig INTEIRO 
+INÍCIO 
+	LER(num) 
+	num1 ← 0 
+	ENQUANTO(num <> 0) 
+		dig ← num MOD 10 
+		num1 ← num1 * 10 + dig 
+		num ← num DIV 10 
+	FIMENQUANTO 
+	ESCREVER(“Resultado: ”, num1) 
+FIM 
+
+RESPOSTA:
+
+O algoritmo inverte um número inteiro. Exemplo: 123 > 321

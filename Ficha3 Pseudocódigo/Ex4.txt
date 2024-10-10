@@ -1,0 +1,20 @@
+ED: 
+	num, num1, dig, aux INTEIRO 
+INÍCIO 
+	LER(num) 
+	aux ← num
+	num1 ← 0 
+
+	ENQUANTO(aux <> 0) 
+		dig ← aux MOD 10 
+		num1 ← num1 * 10 + dig 
+		aux ← aux DIV 10 
+	FIMENQUANTO 
+
+	SE (num1 = num)
+		ESREVER("Número é capicua!")	
+	SENAO
+		ESREVER("Número não é capicua!")	
+
+	FIMSE
+FIM 

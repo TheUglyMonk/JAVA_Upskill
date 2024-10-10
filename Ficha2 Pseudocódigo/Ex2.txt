@@ -1,0 +1,65 @@
+ED:
+	nota, somaNeg REAL
+	N, contNeg, contPos, cont INTEIRO
+INICIO
+	LER(N)
+	contPos = 0
+	conNeg = 0 
+	somaNeg = 0
+	SE N >= 1 ENTAO
+		PARA cont = 1 ATE N
+			LER(nota)
+			SE nota >= 10 ENTAO
+				contPos = contPos +1
+			SENAO
+				somaNeg = somaNeg + nota
+				contNeg = contNeg + 1
+			FIMSE
+		FIMPARA
+		ESCREVER("Percentagem de positivas é: ", (contPos * 100)/N)
+		SE contNeg > 0
+			ESCREVER("Média das noas negativas é: ", somaNeg/cntNeg)
+		SENAO
+			ESCREVER("Não houve negativas.")
+		FIMSE
+	SENAO
+		ESCREVER("N alunos introduzido é inválido!")
+	FIMSE
+FIM
+
+
+/////////////////////////////////////////////////////////////////////////
+
+OUTRA ALTERNATIVA COM VALIDAÇAO EM CICLO
+
+/////////////////////////////////////////////////////////////////////////
+
+ED:
+	nota, somaNeg REAL
+	N, contNeg, contPos, cont INTEIRO
+INICIO
+	LER(N)
+	contPos = 0
+	conNeg = 0 
+	somaNeg = 0
+	ENQUANTO N<=0
+		ESCREVER("Número de alunos introduzido é inválido!")
+		ESCREVER("Por favor, introduzir um novo!")
+		LER(N)
+	FIMENQUANT0
+	PARA cont = 1 ATE N
+		LER(nota)
+		SE nota >= 10 ENTAO
+				contPos = contPos +1
+		SENAO
+				somaNeg = somaNeg + nota
+				contNeg = contNeg + 1
+		FIMSE
+	FIMPARA
+	ESCREVER("Percentagem de positivas é: ", (contPos * 100)/N)
+	SE contNeg > 0
+		ESCREVER("Média das noas negativas é: ", somaNeg/cntNeg)
+	SENAO
+		ESCREVER("Não houve negativas.")
+	FIMSE
+FIM

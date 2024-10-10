@@ -1,0 +1,44 @@
+ED
+	h1, h2, taxa1, taxa2 REAL
+	anos INTEIROS
+
+INICIO
+
+	REPETE
+		LER(h1)
+		LER(h2)
+		LER(taxa1)
+		LER(taxa2)
+	ENQUANTO (h1 <= 0 OU h2 <= 0 OU taxa1 <= 0 OU taxa2 <= 0 OU h1=h2)
+	anos = 0
+	
+	SE (h1 > h2) ENTAO
+		SE (taxa2 > taxa1)
+			ENQUANTO (h1 > h2)
+				anos = anos + 1
+				h1 = h1 + taxa1
+				h2 = h2 + taxa2
+				ESCREVER("NO ", anos"º ano: ", h1, " ", h2)
+		SENAO
+			ESCREVER("A criança mais baixa nunca pode alcançar a mais alta")
+		FIMSE
+	SENAO
+		SE (taxa1 > taxa2)
+			ENQUANTO (h2 > h1)
+				anos = anos + 1
+				h1 = h1 + taxa1
+				h2 = h2 + taxa2
+				ESCREVER("NO ", anos"º ano: ", h2, " ", h1)
+		SENAO
+			ESCREVER("A criança mais baixa nunca pode alcançar a mais alta")
+		FIMSE
+	FIMSE
+FIM
+
+////////////////////////////////////////////////////////////////////////
+
+Exercício resolvido supondo que a altura das crianças foi dada em centímetros. Caso fossem dadas em metros, convertemos tudo para metros:
+
+taxa = taxa/100
+
+///////////////////////////////////////////////////////////////////////
