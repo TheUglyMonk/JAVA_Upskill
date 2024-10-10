@@ -1,0 +1,22 @@
+ED:
+	x, y REAL
+INICIO
+	LER(x,y)
+
+	// caso não incluído no enunciado
+	SE( x = y )							
+		ESCREVER(X é igual a Y, logo X é múltiplo e divisor de Y)
+	SENAO (...)
+	//
+
+	SE( x MOD y = 0)
+		ESCREVER(x, " é múltiplo de ", y)
+	FIMSE
+	SE( y MOD x = 0)
+		ESREVER(y, " é múltiplo de ", x)
+	FIMSE 
+	SE ( x MOD y <> 0 E y MOD x <> 0)
+		ESREVER(x, " não é múltiplo nem divisor de ", y)
+	FIMSE
+FIM
+	

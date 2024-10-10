@@ -1,0 +1,8 @@
+ED:
+	p, pi, a REAL
+INICIO
+	LER(p)
+	pi = 3,14
+	a = (p^2)/(4*pi)
+	ESCREVER(a)
+FIM

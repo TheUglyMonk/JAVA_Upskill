@@ -1,0 +1,11 @@
+ED:
+	x, Y REAL
+INICIO
+	LER(x)
+	Se(x <= 0)
+		y = x
+	SENAO
+		y = (x^2)-(2*x)
+	FIMSE
+	ESCREVER(y)
+FIM

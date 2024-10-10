@@ -1,0 +1,10 @@
+ED:
+	val1, val2, val3, val4, val5 REAL
+	km REAL
+	media REAL
+INICIO
+	LER(val1, val2, val3, val4, val5)
+	media = (val1+val2+val3+val4+val5)/5
+	km = media*1,609
+	ESCREVER(km)
+FIM

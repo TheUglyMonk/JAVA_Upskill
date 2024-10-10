@@ -1,0 +1,29 @@
+ED: 
+	horaSaida, minSaida, horaChegada, minChegada, horaDuraçao, minDuraçao INTEIRO
+	diaSeguinte BOOLEANO
+INICIO 
+	LER(horaSaida, minSaida, horaDuraçao, minDuraçao) 
+	
+	horaChegada = horaSaida + horaDuraçao
+	minChegada = minSaida + minDuraçao
+	
+	SE (minChegada > 60) 
+ 		horaChegada = horaChegada + 1
+		minChegada = minChegada - 60
+	FIMSE
+	
+	SE (horaChegada > 24)
+		diaSeguinte = TRUE
+		horaChegada = horahegada - 24
+	SENAO
+		diaSeguinte = FALSE
+	FIMSE
+
+	ESCREVER("Hora de chegada",horaChegada,":",minChegada)
+ 
+	SE (diaSeguinte) 
+ 		ESCREVER(“Chega no dia Seguinte”) 
+	SENAO 
+		ESCREVER("Não chega no dia seguinte") 
+	FIMSE 
+FIM

@@ -1,0 +1,13 @@
+ED:
+	x1, y1, x2, y2, d REAL
+	aux_x, aux_y REAL
+INICIO
+	LER(x1, y1, x2, y2)
+	aux_x = x2 - x1
+	aux_y = y2 - y1
+	aux_x = aux_x ^ 2
+	aux_y = aux_y ^ 2
+	d = aux_x + aux_y
+	d = d ^ 0.5
+	ESCREVER(d)
+FIM

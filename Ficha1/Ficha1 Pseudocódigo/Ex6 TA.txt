@@ -1,0 +1,41 @@
+ED:
+	dia, mes, diasEmFalta, diasPassados INTEIRO
+	aux BOLEANO
+INICIO
+	LER(dia, mes)
+	aux = TRUE
+	CASO mes SEJA
+	 1:
+		diasPassados = dia
+	 2:
+		diasPassados = dia + 31
+	 3:
+		diasPassados = dia + 60
+	 4:
+		diasPassados = dia + 91
+	 5:
+		diasPassados = dia + 121
+	 6:
+		diasPassados = dia + 152
+	 7:
+		diasPassados = dia + 182
+	 8:
+		diasPassados = dia + 213
+	 9:
+		diasPassados = dia + 244
+	 10:
+		diasPassados = dia + 274
+	 11:
+		diasPassados = dia + 305
+	 12:
+		diasPassados = dia + 335
+	 OUTRO:
+		aux = FALSE
+	FIMCASO
+
+	diasEmFalta = 366 - diasPassados
+	SE(AUX)
+		ESCREVER ("O número de dias em falta é ", diasEmFalta)
+	SENAO
+		ESCREVER("Mês incorreto!")
+FIM

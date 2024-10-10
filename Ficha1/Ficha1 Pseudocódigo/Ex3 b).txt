@@ -1,0 +1,33 @@
+ED:
+	valor1, valor2, valor3, aux INTEIRO
+INICIO
+	LER(valor1, valor2, valor3)
+	SE(valor1<valor2 e valor1<valor3) // valor1 é o menor
+		SE(valor3<valor2)
+		aux = valor3
+		valor3 = valor2
+		valor2 = aux
+		FIMSE
+	FIMSE
+	SE(valor2<valor3) // valor2 é o menor
+		aux = valor1
+		valor1 = valor2
+		valor2 = aux
+		SE(valor3<valor2)
+		aux = valor3
+		valor3 = valor2
+		valor2 = aux
+		FIMSE
+	SENAO				 // valor3 é o menor
+		aux = valor1
+		valor1 = valor3
+		valor3 = aux	
+		SE(valor3<valor2)
+		aux = valor3
+		valor3 = valor2
+		valor2 = aux
+		FIMSE
+	FIMSE	
+	ESCREVER(valor1, valor2, valor3)
+FIM
+		

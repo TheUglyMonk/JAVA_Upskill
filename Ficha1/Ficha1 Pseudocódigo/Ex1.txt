@@ -1,0 +1,18 @@
+ED: 
+	num, dig1, dig2, dig3 INTEIRO 
+INICIO 
+	LER(num) 
+	SE (num<100 ou num>999) 
+ 		ESCREVER(“Número não tem 3 dígitos”) 
+	SENAO 
+	dig3 = num MOD 10 
+	dig2 = (num DIV 10) MOD 10 
+	dig1 = (num DIV 100) MOD 10 
+	ESCREVER(dig1, “ ”, dig2, “ ”, dig3) 
+	FIMSE 
+	SE (num MOD 2 <> 0) 
+ 		ESCREVER(“Impar”) 
+	SENAO 
+		ESCREVER("Par") 
+	FIMSE 
+FIM

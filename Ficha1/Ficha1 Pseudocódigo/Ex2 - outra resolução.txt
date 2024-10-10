@@ -1,0 +1,18 @@
+ED: 
+	horaSaida, minSaida, horaChegada, minChegada, horaDuraçao, minDuraçao INTEIRO
+	auxsaida, auxChegada, auxDuraçao INTEIRO
+INICIO
+	LER(horaSaida, minSaida, horaDuraçao, minDuraçao) 
+	auxsaida = (horaSaida*60) + minSaida
+	auxDuraçao = (horaDuraçao*60 + minDuraçao
+	auxChegada = auxSaida + auxDuraçao
+	SE (auxChegada > 1440)
+		Escrever("Chega no dia seguinte")
+		auxChegada = auxChegada - 1440
+	SENAO 
+		ESCREVER("Não chega no dia seguinte") 
+	FIMSE
+	horaChegada = auxChegada DIV 60
+	minChegada = auxChegada MOD 60
+	ESCREVER("Hora de chegada",horaChegada,":",minChegada)
+FIM
