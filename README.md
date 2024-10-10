@@ -1,6 +1,8 @@
 # JAVA_Upskill
 
-Neste repositório encontram as soluções das fichas realizadas no primeiro módulo do Curso Java + .NET Minsait (3ª edição) da UPSKILL, em Amarante. 
+Algoritmia e Programação Procedimental em Java
+
+Neste repositório encontram as soluções das fichas realizadas no primeiro módulo, denominado Algoritmia e Programação Procedimental em Java, do Curso Java + .NET Minsait (3ª edição) da UPSKILL, em Amarante. 
 
 Duração: 63 horas (9 dias) em regime síncrono.
 
