@@ -1,9 +1,0 @@
-PRODUTO1,Porto:150,Lisboa:200,Coimbra:90
-PRODUTO2,Porto:80,Lisboa:90,Braga:110,Coimbra:90
-PRODUTO3,Porto:150,Lisboa:200,Coimbra:90
-PRODUTO4,Porto:150,Coimbra:140
-PRODUTO5,Coimbra:90,Lisboa:140,Braga:150
-PRODUTO6,Porto:170,Lisboa:140,Braga:150,Coimbra:30
-PRODUTO7,Porto:100,Lisboa:190,Braga:140
-PRODUTO8,Porto:80
-PRODUTO9,Viana do Castelo:500000000
